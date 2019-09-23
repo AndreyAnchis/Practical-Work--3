@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ForConsole2
+namespace WhileConsole1
 {
     class Program
     {
@@ -8,14 +8,14 @@ namespace ForConsole2
         {
             Console.WriteLine("N = ");
             int n = Convert.ToInt32(Console.ReadLine());
-            double sum = 0;
-            if (n > 0 && n % 1 == 0)
+            int k = 0;
+            if (n > 0)
             {
-                for (double i = 1; i <= n; i++)
+                while (k != Math.Floor(Math.Log(n, 3)) + 1)
                 {
-                    sum = sum + (1 / i);
-                    Console.WriteLine(sum);
+                    k++;
                 }
+                Console.WriteLine(k);
             }
             else
             {

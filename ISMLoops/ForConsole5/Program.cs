@@ -19,11 +19,19 @@ namespace ForConsole5
         {
             int n = Convert.ToInt32(Console.ReadLine());
             int res = 0;
-            for(int i = 1; i <= n; i++)
+            if (n > 0 && n % 1 == 0)
             {
-                res = res + Factorial(i);
+                for (int i = 1; i <= n; i++)
+                {
+                    res = res + Factorial(i);
+                }
+                Console.WriteLine(res);
             }
-            Console.WriteLine(res);
+            else
+            {
+                Console.WriteLine("Ошибка");
+            }
+            Console.ReadKey();
         }
     }
 }

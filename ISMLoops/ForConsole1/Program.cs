@@ -11,11 +11,18 @@ namespace ForConsole1
             Console.WriteLine("B = ");
             int b = Convert.ToInt32(Console.ReadLine());
             int dob;
-            for(int i = a; i <= b; i++)
+            if (a < b)
             {
-                dob = a * b;
-                Console.WriteLine(dob);
-                a++;
+                for (int i = a; i <= b; i++)
+                {
+                    dob = a * b;
+                    Console.WriteLine(dob);
+                    a++;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Ошибка");
             }
             Console.ReadKey();
         }
