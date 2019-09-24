@@ -6,20 +6,28 @@ namespace WhileConsole1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("N = ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int k = 0;
-            if (n > 0)
+            try
             {
-                while (k != Math.Floor(Math.Log(n, 3)) + 1)
+                Console.WriteLine("N = ");
+                int n = Convert.ToInt32(Console.ReadLine());
+                int k = 0;
+                if (n > 0)
                 {
-                    k++;
+                    while (k != Math.Floor(Math.Log(n, 3)) + 1)
+                    {
+                        k++;
+                    }
+                    Console.WriteLine(k);
                 }
-                Console.WriteLine(k);
+                else
+                {
+                    Console.WriteLine("Ошибка");
+                }
             }
-            else
+
+            catch (Exception ex)
             {
-                Console.WriteLine("Ошибка");
+                Console.WriteLine("Ошибка ввода данных");
             }
             Console.ReadKey();
         }

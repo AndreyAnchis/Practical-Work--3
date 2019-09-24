@@ -17,19 +17,27 @@ namespace ForConsole5
         }
         static void Main(string[] args)
         {
-            int n = Convert.ToInt32(Console.ReadLine());
-            int res = 0;
-            if (n > 0 && n % 1 == 0)
+            try
             {
-                for (int i = 1; i <= n; i++)
+                int n = Convert.ToInt32(Console.ReadLine());
+                int res = 0;
+                if (n > 0 && n % 1 == 0)
                 {
-                    res = res + Factorial(i);
+                    for (int i = 1; i <= n; i++)
+                    {
+                        res = res + Factorial(i);
+                    }
+                    Console.WriteLine(res);
                 }
-                Console.WriteLine(res);
+                else
+                {
+                    Console.WriteLine("Ошибка");
+                }
             }
-            else
+
+            catch (Exception)
             {
-                Console.WriteLine("Ошибка");
+                Console.WriteLine("Ошибка ввода данных");
             }
             Console.ReadKey();
         }

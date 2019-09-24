@@ -6,13 +6,14 @@ namespace WhileConsole2
     {
         static void Main(string[] args)
         {
+            try { 
             Console.WriteLine("Введите %");
             double s = 10;
             double p = Convert.ToDouble(Console.ReadLine());
             int days = 0;
-            if(p > 0 && p < 50)
+            if (p > 0 && p < 50)
             {
-                while(s < 200)
+                while (s < 200)
                 {
                     s += s * (p / 100);
                     days++;
@@ -23,6 +24,13 @@ namespace WhileConsole2
             {
                 Console.WriteLine("Ошибка");
             }
+        }
+
+                catch (Exception ex)
+            {
+                Console.WriteLine("Ошибка ввода данных");
+            }
+            Console.ReadKey();
         }
     }
 }

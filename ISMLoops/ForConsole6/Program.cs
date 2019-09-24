@@ -6,21 +6,29 @@ namespace ForConsole6
     {
         static void Main(string[] args)
         {
-            int n = Convert.ToInt32(Console.ReadLine());
-            double sum = 0;
-            int a;
-            if (n > 0 && n % 1 == 0)
+            try
             {
-                for (int i = 1; i <= n; i++)
+                int n = Convert.ToInt32(Console.ReadLine());
+                double sum = 0;
+                int a;
+                if (n > 0 && n % 1 == 0)
                 {
-                    a = n + 1;
-                    sum = sum + Math.Pow(i, a - i);
+                    for (int i = 1; i <= n; i++)
+                    {
+                        a = n + 1;
+                        sum = sum + Math.Pow(i, a - i);
+                    }
+                    Console.WriteLine(sum);
                 }
-                Console.WriteLine(sum);
+                else
+                {
+                    Console.WriteLine("Ошибка");
+                }
             }
-            else
+
+            catch (Exception)
             {
-                Console.WriteLine("Ошибка");
+                Console.WriteLine("Ошибка ввода данных");
             }
             Console.ReadKey();
         }

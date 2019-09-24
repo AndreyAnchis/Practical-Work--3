@@ -6,23 +6,31 @@ namespace ForConsole1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("A = ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("B = ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            int dob;
-            if (a < b)
+            try
             {
-                for (int i = a; i <= b; i++)
+                Console.WriteLine("A = ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("B = ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                int dob;
+                if (a < b)
                 {
-                    dob = a * b;
-                    Console.WriteLine(dob);
-                    a++;
+                    for (int i = a; i <= b; i++)
+                    {
+                        dob = a * b;
+                        Console.WriteLine(dob);
+                        a++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка");
                 }
             }
-            else
+
+            catch (Exception)
             {
-                Console.WriteLine("Ошибка");
+                Console.WriteLine("Ошибка ввода данных");
             }
             Console.ReadKey();
         }

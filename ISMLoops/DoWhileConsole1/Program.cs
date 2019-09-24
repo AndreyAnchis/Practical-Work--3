@@ -6,6 +6,7 @@ namespace DoWhileConsole1
     {
         static void Main(string[] args)
         {
+            try { 
             Console.WriteLine("Введите число");
             int n;
             double sum = 0;
@@ -15,6 +16,12 @@ namespace DoWhileConsole1
                 sum = sum + n;
             } while (n != 0);
             Console.WriteLine(sum);
+            }
+                catch (Exception)
+                {
+                    Console.WriteLine("Ошибка ввода данных");
+                }
+            Console.ReadKey();
         }
     }
 }
