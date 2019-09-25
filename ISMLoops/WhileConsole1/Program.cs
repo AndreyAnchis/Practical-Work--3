@@ -25,7 +25,7 @@ namespace WhileConsole1
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine("Ошибка ввода данных");
             }

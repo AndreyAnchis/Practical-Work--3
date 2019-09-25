@@ -11,7 +11,7 @@ namespace ForConsole6
                 int n = Convert.ToInt32(Console.ReadLine());
                 double sum = 0;
                 int a;
-                if (n > 0 && n % 1 == 0)
+                if (n > 0)
                 {
                     for (int i = 1; i <= n; i++)
                     {
